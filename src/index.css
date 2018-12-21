@@ -1,14 +1,45 @@
 body {
+  background: linear-gradient(-45deg, #87bef2, #6fb5f7, #14b3dd);
+  font-family: sans-serif;
+  height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  width: 100wh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+form {
+  padding: 20px;
+  margin-top: 60px;
+}
+
+form button, form h5 {
+  margin: 20px 0;
+}
+
+.brand-logo {
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+.btn {
+  background-color: #f78888;
+}
+
+.btn:hover {
+  background-color: #f79595;
+}
+
+.btn-floating {
+  background-color: #f78888;
+}
+
+.btn-floating:hover {
+  background-color: #f79595;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readlonly]) {
+  border-color: #f78888;
+  box-shadow: none;
 }
