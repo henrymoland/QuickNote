@@ -1,5 +1,5 @@
 const initState = {
-    projects: [
+    notes: [
         {
             id: '1',
             title: 'Work on web project',
@@ -18,8 +18,8 @@ const initState = {
     ]
 }
 
-const projectReducer = (state = initState, action) => {
+const noteReducer = (state = initState, action) => {
     return state
 }
 
-export default projectReducer;
+export default noteReducer;
