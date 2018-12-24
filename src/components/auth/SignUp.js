@@ -9,13 +9,13 @@ class SignUp extends Component {
     };
 
     handleChange= (e) => {
-        this.setState({
-            [e.target.id]:e.target.value
+        this.setState ({
+            [e.target.id]: e.target.value
         })
     };
 
     handleSubmit= (e) => {
-        e.preventdefault();
+        e.preventDefault();
         console.log(this.state);
     };
 
@@ -25,7 +25,7 @@ class SignUp extends Component {
                 <form onSubmit={this.handleSubmit} className="white">
                     <h5 className="grey-text text-darken-3">Sign Up</h5>
                     <div className="input-field">
-                        <label htmlFor="firstNAme">First Name</label>
+                        <label htmlFor="firstName">First Name</label>
                         <input type="text" id="firstName" onChange={this.handleChange}></input>
                     </div>
                     <div className="input-field">
@@ -41,7 +41,7 @@ class SignUp extends Component {
                         <input type="password" id="password" onChange={this.handleChange}></input>
                     </div>
                     <div className="input-field">
-                        <btn className="btn z-depth-0">Sign Up</btn>
+                        <button className="btn z-depth-0">Sign Up</button>
                     </div>
                 </form>
             </div>

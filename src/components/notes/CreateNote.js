@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { createNote } from '../../store/actions/noteActions';
+import { connect } from 'react-redux';
 
 class CreateNote extends Component {
     state= {
@@ -8,14 +10,15 @@ class CreateNote extends Component {
 
     handleChange= (e) => {
         this.setState({
-            [e.target.id]:e.target.value
+            [e.target.id]: e.target.value
         })
     };
 
     handleSubmit= (e) => {
-        e.preventdefault();
-        console.log(this.state);
-    };
+        e.preventDefault();
+        //console.log(this.state);
+        this.props.createNote(this.state)
+    }
 
     render(){
         return (
@@ -28,14 +31,20 @@ class CreateNote extends Component {
                     </div>
                     <div className="input-field">
                         <label htmlFor="content">Note</label>
-                        <textArea id="content" className="materialize-textarea"></textArea>
+                        <textarea id="content" className="materialize-textarea" onChange={this.handleChange}></textarea>
                     </div>
                     <div className="input-field">
-                        <btn className="btn z-depth-0">Create</btn>
+                        <button className="btn z-depth-0">Create</button>
                     </div>
                 </form>
             </div>
         )
     }
 };
-export default CreateNote;
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createNote: (note) => dispatch(createNote(note))
+    }
+}
+export default connect(null,mapDispatchToProps) (CreateNote);
