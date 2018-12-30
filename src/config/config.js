@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
-import 'firebase/firestore'
-import 'firebase/auth'
+import 'firebase/firestore';
+import 'firebase/auth';
 
 // Initialize Firebase
 var config = {
@@ -11,8 +11,8 @@ var config = {
     storageBucket: "quicknote209.appspot.com",
     messagingSenderId: "762277026368"
   };
+  
   firebase.initializeApp(config);
-
-  firebase.firestore().settings({ timestampsInSnapShots: true });
+  firebase.firestore().settings( { timestampsInSnapshots: true });
 
   export default firebase;
