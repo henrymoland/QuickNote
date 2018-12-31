@@ -47,4 +47,5 @@ const mapDispatchToProps = (dispatch) => {
         createNote: (note) => dispatch(createNote(note))
     }
 }
+
 export default connect(null,mapDispatchToProps) (CreateNote);
